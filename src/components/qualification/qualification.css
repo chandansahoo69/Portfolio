@@ -11,22 +11,28 @@
 .qualification__button {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium) ;
+    padding: 0.3rem 1rem;
     color: var(--title-color);
     margin: var(--mb-1);
     cursor: pointer;
+    transition: .5s;
+    border-radius: .5rem;
 }
 
 .qualification__button:hover {
-    color: var(--title-color-dark);
+    background-color: var(--title-color-dark);
+    color: var(--container-color);
 }
 
 .qualification__icon {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     margin-right: var(--mb-0-25);
 }
 
 .qualification__active {
-    color: var(--title-color-dark);
+    position: relative;
+    color: var(--container-color);
+    background-color: var(--title-color-dark);
 }
 
 .qualification__sections {
@@ -65,11 +71,15 @@
 }
 
 .qualification__data:hover .qualification__subtitle  {
-    color: rgba(255, 255, 255, 40%);
+    color: rgba(255, 255, 255, 70%);
 }
 
-.qualification__data:hover .qualification__calender  {
-    color: rgba(255, 255, 255, 30%);
+.qualification__data:hover .qualification__calender {
+    color: rgba(255, 255, 255, 60%);
+}
+
+.qualification__data:hover .qualification__para {
+    color: rgba(255, 255, 255, 40%);
 }
 
 .qualification__data:hover .check {

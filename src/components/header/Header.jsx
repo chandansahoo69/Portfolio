@@ -14,10 +14,12 @@ const Header = () => {
   const [Toggle, showMenu] = useState(false);
   const [activeNav, setActiveNav] = useState("#home");
 
+  console.log("activeNav", activeNav);
+
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="index.html" className="nav__logo">
+        <a href="/" className="nav__logo">
           Chandan
         </a>
 

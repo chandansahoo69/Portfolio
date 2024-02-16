@@ -17,9 +17,9 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            Frontend developer, I create web pages with UI / UX user interface,
-            I have years of experience and many clients are happy with the
-            projects carried out.
+            Full-Stack MERN Developer, creating web applications from scratch.
+            Many of my clients have been happy with my projects over the years
+            and I have 1 year of experience.
           </p>
           <a href={CV} download className="button button--flex">
             Download CV{" "}

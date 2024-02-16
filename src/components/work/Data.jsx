@@ -1,8 +1,6 @@
 import Work1 from "../../assets/work1.jpg";
 import Work2 from "../../assets/work2.jpg";
 import Work3 from "../../assets/work3.jpg";
-import Work4 from "../../assets/work4.jpg";
-import Work5 from "../../assets/work5.jpg";
 
 export const projectsData = [
   {
@@ -33,24 +31,6 @@ export const projectsData = [
     host_link:
       "https://github.com/chandansahoo69/Reserve_Now/blob/main/README.md",
   },
-  //   {
-  //     id: 4,
-  //     image: Work4,
-  //     title: "App movil",
-  //     desc: "Web design",
-  //     category: "app",
-  //     github_link: "web",
-  //     host_link: "web",
-  //   },
-  //   {
-  //     id: 5,
-  //     image: Work5,
-  //     title: "Web design",
-  //     desc: "Web design",
-  //     category: "web",
-  //     github_link: "web",
-  //     host_link: "web",
-  //   },
 ];
 
 export const projectsNav = [

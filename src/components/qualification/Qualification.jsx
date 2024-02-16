@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./qualification.css";
+import { qualifications } from "./constants.js";
 
 const Qualification = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -18,8 +19,8 @@ const Qualification = () => {
           <div
             className={
               toggleState === 1
-                ? "qualification__button button--flex"
-                : "qualification__button qualification__active button--flex"
+                ? "qualification__button qualification__active button--flex"
+                : "qualification__button button--flex"
             }
             onClick={() => toggleTab(1)}
           >
@@ -30,8 +31,8 @@ const Qualification = () => {
           <div
             className={
               toggleState === 2
-                ? "qualification__button button--flex"
-                : "qualification__button qualification__active button--flex"
+                ? "qualification__button qualification__active button--flex"
+                : "qualification__button button--flex"
             }
             onClick={() => toggleTab(2)}
           >
@@ -58,7 +59,8 @@ const Qualification = () => {
                   <i className="uil uil-calendar-alt"></i> 2019 - 2023
                 </div>
                 <span className="qualification__para">
-                  Currently, I'm pursuing a B.Tech in CSE at BPUT.
+                  I have completed B.Tech in CSE under Biju Patnaik University
+                  of Technology with a CGPA of 8.74.
                   <br />
                   Bhubaneswar, Odisha, 754012
                 </span>
@@ -134,65 +136,51 @@ const Qualification = () => {
                 : "qualification__content"
             }
           >
-            <div className="qualification__data">
-              <div className="check">
-                <h3 className="qualification__title">Full Stack Developer</h3>
-                <span className="qualification__subtitle">Glow TechMor</span>
-                <div className="qualification__calender">
-                  <i className="uil uil-calendar-alt"></i> June 2022 - July 2022
+            {qualifications.map((qualification, index) => (
+              <div className="qualification__data" key={index}>
+                {index % 2 === 1 && (
+                  <>
+                    <div></div>
+
+                    <div>
+                      <span className="qualification__rounder">
+                        <div className="qualification__point"></div>
+                      </span>
+                      <span className="qualification__line"></span>
+                    </div>
+                  </>
+                )}
+
+                <div className="check">
+                  <h3 className="qualification__title">
+                    {qualification.title}
+                  </h3>
+                  <span className="qualification__subtitle">
+                    {qualification.company}
+                  </span>
+                  <div className="qualification__calender">
+                    <i className="uil uil-calendar-alt"></i>{" "}
+                    {qualification.duration}
+                  </div>
+                  <span className="qualification__para">
+                    <ul>
+                      {qualification.description.map((desc, i) => (
+                        <li key={i}>{desc}</li>
+                      ))}
+                    </ul>
+                  </span>
                 </div>
-                <span className="qualification__para">
-                  <ul>
-                    <li>
-                      Worked on an E-Commerce Web Application Backend, created
-                      APIs and login system.
-                    </li>
-                    <li>
-                      Managed the API calls for fetching data from the database
-                      to the user interface using Express and MongoDB.
-                    </li>
-                  </ul>
-                </span>
-              </div>
 
-              <div>
-                <span className="qualification__rounder">
-                  <div className="qualification__point"></div>
-                </span>
-                <span className="qualification__line"></span>
+                {index % 2 === 0 && (
+                  <div>
+                    <span className="qualification__rounder">
+                      <div className="qualification__point"></div>
+                    </span>
+                    <span className="qualification__line"></span>
+                  </div>
+                )}
               </div>
-            </div>
-
-            <div className="qualification__data">
-              <div></div>
-
-              <div>
-                <span className="qualification__rounder">
-                  <div className="qualification__point"></div>
-                </span>
-                <span className="qualification__line"></span>
-              </div>
-
-              <div className="check">
-                <h3 className="qualification__title">Front End Developer</h3>
-                <span className="qualification__subtitle">Learn For Cause</span>
-                <div className="qualification__calender">
-                  <i className="uil uil-calendar-alt"></i> Nov 2020 - April 2021
-                </div>
-                <span className="qualification__para">
-                  <ul>
-                    <li>
-                      Developed a full-stack website using ReactJS & TailwindCSS
-                      in the front end.
-                    </li>
-                    <li>
-                      Contributed as a front-end developer on some web pages of
-                      LFC's official website.
-                    </li>
-                  </ul>
-                </span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
