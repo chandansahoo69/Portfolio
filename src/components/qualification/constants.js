@@ -2,7 +2,7 @@ export const qualifications = [
   {
     title: "MERN Stack Developer",
     company: "Analytic Labs",
-    duration: "June 2022 - July 2022",
+    duration: "March 2023 - Dec 2023",
     description: [
       "Elevated user experience through the seamless integration of dynamic components and an efficient search system.",
       "Integrated impactful features like lazy loading and private routes for user access based on roles.",
